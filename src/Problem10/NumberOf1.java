@@ -1,3 +1,4 @@
+package Problem10;
 
 public class NumberOf1 {
 	public static int numberOf1(int n){

@@ -1,3 +1,4 @@
+package Problem12;
 
 public class PrintN {
 

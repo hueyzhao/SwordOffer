@@ -1,4 +1,7 @@
-package BinaryTree;
+package Problem18;
+
+import Common.BinaryTree.BinaryTreeNode;
+import Problem6.ConstructBinaryTree;
 
 public class SubTree {
 

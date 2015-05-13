@@ -1,4 +1,6 @@
-package BinaryTree;
+package Problem6;
+
+import Common.BinaryTree.BinaryTreeNode;
 
 public class ConstructBinaryTree {
 
