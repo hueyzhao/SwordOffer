@@ -28,4 +28,7 @@ public class BinaryTreeNode<T> {
 		this.rightChild = rightChild;
 		
 	}
+	public BinaryTreeNode(){
+		
+	}
 }
