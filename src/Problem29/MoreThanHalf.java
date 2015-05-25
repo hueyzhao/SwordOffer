@@ -5,8 +5,8 @@ public class MoreThanHalf {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		MoreThanHalf half = new MoreThanHalf();
-		int [] array = {1,2,3,4,1};
-		System.out.println(half.partitionMoreThanHalf(array));
+		int [] array = {1,2,1,3,1,4};
+		System.out.println(half.countMoreThanHalf(array));
 	}
 	 public int partitionMoreThanHalf(int [] array){
          if(array == null || array.length <=0)
@@ -61,5 +61,32 @@ public class MoreThanHalf {
          }
          
     }
+    public int countMoreThanHalf(int[] array){
+        if(array == null || array.length <=0)
+             return -1;
+        int midValue = count(array);
+        if(!checkMoreThanHalf(array,midValue))
+                  return -1;
+        return midValue;
+   }
+    private int count(int [] array){
+        if(array == null || array.length == 0)
+             return -1;
+        int value =array[0];
+        int count = 1;
+        for(int i = 0;i+1<array.length;i++){
+        if(array[i+1]==value)
+                  count++;
+        else {
+                  count--;
+             }
+        if(count==0){
+             value = array[i+1];
+             count = 1;
+        }
+   }
+        return value;
+   }
+
 
 }
