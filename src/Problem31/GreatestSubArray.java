@@ -3,7 +3,7 @@ package Problem31;
 public class GreatestSubArray {
 	public static void main(String [] args){
 		GreatestSubArray subArray = new GreatestSubArray();
-		int[] array = {1,2,4};
+		int[] array = {-3,-2,-4};
 		System.out.println(subArray.getGreatestSum(array));
 	}
 
@@ -16,7 +16,7 @@ public int getGreatestSum(int [] array){
           int tempSum = 0;
           for(int i =0; i< array.length; i++){
                tempSum = tempSum + array[i];
-               if(tempSum<array[i]){
+               if(tempSum<0){
                     tempSum = array[i];
                }
                if(tempSum > maxSum)
