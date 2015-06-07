@@ -33,7 +33,7 @@ public class NumberOf1 {
 		else if(first == 1){
 			numFirstDigit = Integer.parseInt(new String(newArray))+1;
 		}
-		//number of 1 at other digits
+		//number of 1 at other digits, so offset of this other digits can be 0~9
 		int numOtherDigits = first * (length-1)*powerBase10(length-2);
 		//remove highest digit, get the number of 1 recursively
 		int numRecursive = numberOf1(newArray);
