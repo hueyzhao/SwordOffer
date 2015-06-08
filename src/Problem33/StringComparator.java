@@ -11,14 +11,14 @@ public int compare(String first, String second){
           int secondLength = second.length();
           int longLength;
 
-          char charOfFirst;
-          char charOfSecond; 
-          (firstLength > secondLength) ? (longLength = firstLength) : (longLength = secondLength);
+          char charOfFirst = 0;
+          char charOfSecond = 0; 
+          longLength = (firstLength > secondLength) ? (firstLength) : (secondLength);
           for(int i = 0; i< longLength; i++){
-          if(i < firstLength - 1){
+          if(i < firstLength ){
                charOfFirst = first.charAt(i);
           }    
-          if(i<secondLength -1){
+          if(i<secondLength){
                charOfSecond = second.charAt(i);
           }
                int intOfFirst = charOfFirst - '0';
