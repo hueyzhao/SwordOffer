@@ -4,6 +4,8 @@ public class UglyNumber {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		UglyNumber ugly = new UglyNumber();
+		System.out.println(ugly.getUglyNumber(1500));
 
 	}
 
@@ -31,7 +33,7 @@ public class UglyNumber {
 	     }
 	     
 	     public int minNum(int num1, int num2, int num3){
-	          int min = (num1>num2)?num1:num2;
+	          int min = (num1>num2)?num2:num1;
 	          min = (min>num3)? num3:min;
 	          return min;
 	     }
