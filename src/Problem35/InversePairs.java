@@ -1,14 +1,24 @@
 package Problem35;
 
+/**
+ * @author "huanyu"
+ *Need to very very familiar with all kinds of sort methods. 
+ */
 public class InversePairs {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		InversePairs pair = new InversePairs();
+		int [] intArray = {1,3,2,4,5,6};
+		System.out.println(pair.countInversePairs(intArray));
 
 	}
 	public int countInversePairs(int [] intArray){
         int [] tempArray = new int[intArray.length];
-        return mergeTwoPairs(intArray, tempArray, 0, intArray.length);
+        for(int i = 0; i < intArray.length; i++){
+        	tempArray[i] = intArray[i];
+        }
+        return mergeTwoPairs(intArray, tempArray, 0, intArray.length-1);
         
    }
    private int mergeTwoPairs(int [] dataArray, int [] tempArray, int low, int high){
