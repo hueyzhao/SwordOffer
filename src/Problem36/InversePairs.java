@@ -1,4 +1,4 @@
-package Problem35;
+package Problem36;
 
 /**
  * @author "huanyu"
