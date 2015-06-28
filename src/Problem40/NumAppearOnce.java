@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NumAppearOnce {
-	public List<Integer> findNumberAppearOnce(int [] intArray){
-		List<Integer> resultList = new ArrayList<Integer>();
+	public int [] findNumberAppearOnce(int [] intArray){
+		int [] resultList = new int[2];
 		if(intArray == null || intArray.length<0)
 			return null;
+	
 		if(intArray.length == 1){
-			resultList.add(intArray[0]);
+			resultList[0]=intArray[0];
 			return resultList;
 		}
 			
@@ -33,8 +34,8 @@ public class NumAppearOnce {
 				else
 					secNum ^= intArray[i];
 			}
-			resultList.add(firstNum);
-			resultList.add(secNum);
+			resultList[0] = firstNum;
+			resultList[1] = secNum;
 		}
 		return resultList;
 		
@@ -49,7 +50,7 @@ public class NumAppearOnce {
 			bitIndex ++;
 		}
 		int result = 1;
-		while(bitIndex > 0){
+		while(bitIndex >= 0){
 			result = result <<1;
 			--bitIndex;
 		}
