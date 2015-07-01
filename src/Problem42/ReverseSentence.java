@@ -10,6 +10,8 @@ public class ReverseSentence {
 
 	}
 	public String getReverseSentence(String setence){
+		if(setence == null)
+			return null;
 		char [] wordsArray = setence.toCharArray();
 		wordsArray = reverseArray(wordsArray, 0, wordsArray.length-1);
 		int start = 0;
