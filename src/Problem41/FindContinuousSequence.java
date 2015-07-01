@@ -14,7 +14,7 @@ public class FindContinuousSequence {
 		int endNum = 2;
 		int tempSum = startNum + endNum;
 		
-		while(endNum < (num+1)/2&&startNum<(num+1)/2){
+		while(endNum <= (num+1)/2&&startNum <= (num+1)/2){
 			if(tempSum < num){
 				endNum++;
 				tempSum += endNum;
@@ -22,10 +22,12 @@ public class FindContinuousSequence {
 			else if(tempSum > num){
 				tempSum -= startNum;
 				startNum++;
-				tempSum += startNum;
+				
 			}
 			else{
 				print2End(startNum, endNum);
+				endNum++;
+				tempSum += endNum;
 			}
 				
 		}
