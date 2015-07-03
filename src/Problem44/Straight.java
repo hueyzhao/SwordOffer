@@ -22,6 +22,9 @@ public class Straight {
 			if(i<straightArray.length-1){
 				if(straightArray[i]+1==straightArray[i+1])
 					flag = true;
+				else if(straightArray[i]==straightArray[i+1]){
+					return false;
+				}
 				else{
 					int diff = straightArray[i+1] - straightArray[i] -1;
 					numberOfKing -= diff;
