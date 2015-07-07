@@ -8,7 +8,7 @@ public class String2Int {
 	}
 	
 	public int getInt(String strNum){
-		if(strNum == null){
+		if(strNum == null || strNum.length()<=0){
 			this.valid = false;
 			return 0;
 			
@@ -38,7 +38,7 @@ public class String2Int {
 	
 			if(init){
 				resultNum = charNumArray[i] - '0';
-				
+				init = false;
 			}
 			else{
 				resultNum = resultNum*10L + (charNumArray[i] - '0');
@@ -53,7 +53,11 @@ public class String2Int {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		String2Int converter = new String2Int();
+//		System.out.println(converter.getInt(""));
+//		System.out.println(converter.getInt("+"));
+		System.out.println(converter.getInt("-23445646567878979"));
+		System.out.println(converter.isValid());
 	}
 	
 
