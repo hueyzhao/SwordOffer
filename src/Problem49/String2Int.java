@@ -17,20 +17,25 @@ public class String2Int {
 		long resultNum = 0;
 		boolean init = true;
 		char [] charNumArray = strNum.toCharArray();
+		if(charNumArray.length == 1 && (charNumArray[0]<'0' || charNumArray[0] > '9')){
+			valid = false;
+			return 0;
+		}
 		for(int i = 0; i < charNumArray.length; i++){
-			if(charNumArray[0] == '+')
+			if(charNumArray[i] == '+' && i == 0){
 				minusNum = 1;
-			else if (charNumArray[0] == '-')
+				continue;
+				}
+			else if (charNumArray[i] == '-' && i == 0){
 				minusNum = -1;
-			else if(charNumArray[0]<'0' || charNumArray[0] > '9'){
+				continue;
+			}
+			else if(charNumArray[i]<'0' || charNumArray[i] > '9'){
 				valid = false;
 				return 0;
 			}
 				
-			if(i!=0&&(charNumArray[i]>'9' || charNumArray[i]<'0')){
-				valid = false;
-				return 0;
-			}
+	
 			if(init){
 				resultNum = charNumArray[i] - '0';
 				
