@@ -1,5 +1,9 @@
 package Problem10;
-
+/**
+ * 
+ * @author "huanyu"
+ *need to know more about bit calculation, more examples under this package.
+ */
 public class NumberOf1 {
 	public static int numberOf1(int n){
 	     int digit = 1;
