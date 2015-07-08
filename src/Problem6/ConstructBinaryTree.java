@@ -9,7 +9,8 @@ public class ConstructBinaryTree {
 		String preOrder = "12473568";
 		String inOrder = "47215386";
 		ConstructBinaryTree test = new ConstructBinaryTree();
-		BinaryTreeNode<Character> tree = test.constructCore(preOrder,inOrder, 0, preOrder.length()-1,0,inOrder.length()-1);
+		BinaryTreeNode<Character> tree = test.constructTree(preOrder,inOrder);
+//		BinaryTreeNode<Character> tree = test.constructCore(preOrder,inOrder, 0, preOrder.length()-1,0,inOrder.length()-1);
 		test.preOrder(tree);
 	}
 	public BinaryTreeNode<Character> constructTree(String preOrder,String inOrder){
