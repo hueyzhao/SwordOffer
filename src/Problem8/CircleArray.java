@@ -9,7 +9,9 @@ public class CircleArray {
 
 	}
 	
-
+/**
+ * consider binary search when come across with an ascending or descending array.
+ */
 public static int minValue(int a [], int low, int high){
      if(low<0 || high < 0 || low > high || low> a.length || high > a.length){
      System.out.println("invalid Input");
