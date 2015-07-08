@@ -55,7 +55,10 @@ public class ConstructBinaryTree {
 				preOrder(rootNode.getRightChild());
 		}
 	}
-	
+	/**
+	 * this method doesn't create duplicated strings
+	 * Note that preOrder index need to be calculated with "rootIndex" and leftLength
+	 */
 	private BinaryTreeNode<Character> constructCore(String preOrder, String inOrder, int preOrderStart, int preOrderEnd, int inOrderStart, int inOrderEnd){
 		
 		if(preOrder == null || inOrder == null)
@@ -75,7 +78,6 @@ public class ConstructBinaryTree {
 		char rootChar = preOrderArray[preOrderStart];
 		int rootIndex = returnCharIndex(inOrderArray, rootChar, inOrderStart, inOrderEnd);
 		int leftLength = rootIndex - inOrderStart;
-		int rightLenght = inOrderEnd - rootIndex;
 		if(rootIndex == -1)
 			return null;
 		BinaryTreeNode<Character> root = new BinaryTreeNode<Character>(rootChar, null, null);
