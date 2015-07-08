@@ -3,6 +3,7 @@ package LinkList;
  * 
  * @author "huanyu"
  *remember to ask whether can change data structure
+ *give the interviewer some feedback
  */
 public class ReverseOutput {
 	public <T> void reverseOutput(Node<T> linkList){
