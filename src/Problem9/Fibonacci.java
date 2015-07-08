@@ -1,5 +1,12 @@
 package Problem9;
-
+/**
+ * 
+ * @author "huanyu"
+ *frog climb stages: there're n stages. 
+ *1 jump 1 stage, rest = f(n-1)
+ *2 jump 2 stages, rest = f(n-2)
+ *f(n) = f(n-1) + f(n-2);
+ */
 public class Fibonacci {
 
 	public static void main(String[] args) {
