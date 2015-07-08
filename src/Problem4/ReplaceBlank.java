@@ -1,7 +1,9 @@
 package Problem4;
 
 public class ReplaceBlank {
-
+/**
+ * remember to consider from end to start
+ */
 	 public static char[] replaceBlank(char string[], int length){
 	     if(string == null || length <= 0){
 	     return null;
