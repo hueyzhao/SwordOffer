@@ -1,5 +1,9 @@
 package LinkList;
-
+/**
+ * 
+ * @author "huanyu"
+ *remember to ask whether can change data structure
+ */
 public class ReverseOutput {
 	public <T> void reverseOutput(Node<T> linkList){
 		if(linkList == null){
