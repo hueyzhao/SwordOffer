@@ -5,7 +5,12 @@ import java.util.Queue;
 
 import Common.BinaryTree.BinaryTreeNode;
 import Problem6.ConstructBinaryTree;
-
+/**
+ * don't always use arraylist, think about stack and queue, take advantage of their attributes
+ * @author "huanyu"
+ *
+ * @param <T>
+ */
 public class PrintBinaryTree<T> {
 	 public void printBnaryTreeFromTopToBottom(Queue<BinaryTreeNode<T>> treeNodes){
          Queue<BinaryTreeNode<T>> newNodeQueue = new LinkedList<BinaryTreeNode<T>>();
